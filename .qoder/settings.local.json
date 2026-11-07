@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/honor/document/code/study_mechanics -type f | head -100)",
+      "Bash(ls /home/honor/document/code/study_mechanics/pictures/ | head -80)",
+      "Bash(git:*)"
+    ]
+  }
+}
