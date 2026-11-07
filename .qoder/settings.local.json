@@ -3,7 +3,9 @@
     "allow": [
       "Bash(find /home/honor/document/code/study_mechanics -type f | head -100)",
       "Bash(ls /home/honor/document/code/study_mechanics/pictures/ | head -80)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(find /home/honor/document/code/study_mechanics -maxdepth 3 -type f | head -50)",
+      "Bash(find /home/honor/document/code/study_mechanics -type f -not -path '*/.git/*' -not -path '*/pictures/*' -not -path '*/.qoder/*' | head -50)"
     ]
   }
 }
