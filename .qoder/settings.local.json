@@ -5,7 +5,11 @@
       "Bash(ls /home/honor/document/code/study_mechanics/pictures/ | head -80)",
       "Bash(git:*)",
       "Bash(find /home/honor/document/code/study_mechanics -maxdepth 3 -type f | head -50)",
-      "Bash(find /home/honor/document/code/study_mechanics -type f -not -path '*/.git/*' -not -path '*/pictures/*' -not -path '*/.qoder/*' | head -50)"
+      "Bash(find /home/honor/document/code/study_mechanics -type f -not -path '*/.git/*' -not -path '*/pictures/*' -not -path '*/.qoder/*' | head -50)",
+      "Bash(which pdftotext 2>/dev/null || which pdf2txt 2>/dev/null || pip install pdftotext 2>/dev/null || echo \"No PDF text extractor found\")",
+      "Bash(apt-get install -y poppler-utils 2>/dev/null || pkg install poppler-utils 2>/dev/null || echo \"Cannot install poppler-utils\")",
+      "Bash(pip install PyMuPDF 2>/dev/null || pip3 install PyMuPDF 2>/dev/null || echo \"Cannot install PyMuPDF\")",
+      "Bash(find /home/honor/document/code/study_mechanics -type f | head -80)"
     ]
   }
 }
