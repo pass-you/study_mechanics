@@ -5042,16 +5042,21 @@
         // 目录切换
         function initTocToggle() {
             const tocToggle = document.getElementById('toc-toggle');
-            const toc = document.getElementById('toc');
+            const tocContent = document.getElementById('toc-content');
             
-            if (tocToggle && toc) {
-                tocToggle.addEventListener('click', () => {
-                    toc.classList.toggle('active');
+            if (tocToggle && tocContent) {
+                tocToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isExpanded = tocContent.classList.toggle('expanded');
+                    tocToggle.classList.toggle('active', isExpanded);
+                    tocToggle.setAttribute('aria-expanded', isExpanded);
                 });
                 
                 document.addEventListener('click', (e) => {
-                    if (!toc.contains(e.target) && !tocToggle.contains(e.target)) {
-                        toc.classList.remove('active');
+                    if (!tocToggle.contains(e.target)) {
+                        tocContent.classList.remove('expanded');
+                        tocToggle.classList.remove('active');
+                        tocToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
             }
